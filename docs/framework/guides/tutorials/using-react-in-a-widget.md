@@ -582,7 +582,7 @@ class App extends React.Component {
 		};
 
 		this.handleEditorDataChange = this.handleEditorDataChange.bind( this );
-		this.handleEditorInit = this.handleEditorInit.bind( this );
+		this.handleEditorReady = this.handleEditorReady.bind( this );
 	}
 
 	// A handler executed when the user types or modifies the editor content.
@@ -595,7 +595,7 @@ class App extends React.Component {
 
 	// A handler executed when the editor has been initialized and is ready.
 	// It synchronizes the initial data state and saves the reference to the editor instance.
-	handleEditorInit( editor ) {
+	handleEditorReady( editor ) {
 		this.editor = editor;
 
 		this.setState( {
@@ -621,7 +621,7 @@ class App extends React.Component {
 					data={this.state.editorData}
 					config={this.editorConfig}
 					onChange={this.handleEditorDataChange}
-					onInit={this.handleEditorInit}
+					onReady={this.handleEditorReady}
 				/>
 
 				<h3>Editor data</h3>
@@ -993,7 +993,7 @@ class App extends React.Component {
 		};
 
 		this.handleEditorDataChange = this.handleEditorDataChange.bind( this );
-		this.handleEditorInit = this.handleEditorInit.bind( this );
+		this.handleEditorReady = this.handleEditorReady.bind( this );
 	}
 
 	// A handler executed when the user types or modifies the editor content.
@@ -1006,7 +1006,7 @@ class App extends React.Component {
 
 	// A handler executed when the editor has been initialized and is ready.
 	// It synchronizes the initial data state and saves the reference to the editor instance.
-	handleEditorInit( editor ) {
+	handleEditorReady( editor ) {
 		this.editor = editor;
 
 		this.setState( {
@@ -1032,7 +1032,7 @@ class App extends React.Component {
 					data={this.state.editorData}
 					config={this.editorConfig}
 					onChange={this.handleEditorDataChange}
-					onInit={this.handleEditorInit}
+					onReady={this.handleEditorReady}
 				/>
 
 				<h3>Editor data</h3>

@@ -37,7 +37,7 @@ class App extends Component {
 				<CKEditor
 					editor={ ClassicEditor }
 					data="<p>Hello from CKEditor 5!</p>"
-					onInit={ editor => {
+					onReady={ editor => {
 						// You can store the "editor" and use when it is needed.
 						console.log( 'Editor is ready to use!', editor );
 					} }
@@ -119,7 +119,7 @@ class App extends Component {
 			<div className="App">
 				<h2>CKEditor 5 using a custom build - DecoupledEditor</h2>
 				<CKEditor
-					onInit={ editor => {
+					onReady={ editor => {
 						console.log( 'Editor is ready to use!', editor );
 
 						// Insert the toolbar before the editable area.
@@ -326,7 +326,7 @@ class App extends Component {
 					editor={ ClassicEditor }
 					config={ editorConfiguration }
 					data="<p>Hello from CKEditor 5!</p>"
-					onInit={ editor => {
+					onReady={ editor => {
 						// You can store the "editor" and use when it is needed.
 						console.log( 'Editor is ready to use!', editor );
 					} }
@@ -567,7 +567,7 @@ class App extends Component {
 			<div className="App">
 				<h2>Using CKEditor 5 Framework in React</h2>
 				<CKEditor
-					onInit={ editor => console.log( 'Editor is ready to use!', editor ) }
+					onReady={ editor => console.log( 'Editor is ready to use!', editor ) }
 					onChange={ ( event, editor ) => console.log( { event, editor } ) }
 					config={ {
 						plugins: [ Essentials, Paragraph, Bold, Italic, Heading ],
